@@ -14,10 +14,10 @@ export const useTabberStore = defineStore("tabber", {
         },
       ],
       active: "工作台",
-      components: {
-        工作台: () => import("@/components/workerbench/workerbench.vue"),
-        我的: () => import("@/components/my/my.vue"),
-      },
+      // components: {
+      //   工作台: () => import("@/components/workerbench/workerbench.vue"),
+      //   我的: () => import("@/components/my/my.vue"),
+      // },
     };
   },
   actions: {
@@ -30,5 +30,10 @@ export const useTabberStore = defineStore("tabber", {
     setActive(item) {
       this.active = item.value;
     },
+  },
+  getters: {
+    // getComponent() {
+    //   return this.components[this.active];
+    // },
   },
 });
